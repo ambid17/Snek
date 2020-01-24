@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     private float playSpaceSize = 9f; //The play space is just smaller than 10 units so the food spawns inside the walls
     private int foodLayer = 8; //The layer of the food for checking collision
-    private Rigidbody myRigidBody;
+    public Rigidbody myRigidBody;
     private float moveSpeed = 1;
     
 
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        myRigidBody.velocity = transform.forward * moveSpeed;
+            myRigidBody.velocity = transform.forward * moveSpeed;
 
         //If we hit the walls (which are all 10 units from the origin) we lose
         if(transform.position.x >= 10 ||
